@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning</title>
+    <script>
+        if (confirm("Enter the site at your own risk!")) {
+                window.addEventListener("click", playSound, { once: true })
+                alert("Initializing the audio !");
+            }
+
+            function playSound() {
+                const audio = new Audio('warning.mp3');
+                audio.loop = true;
+                audio.play();
+            }
+    </script>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .warning {
+            padding: 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .input-box {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid red;
+            border-radius: 5px;
+            background-color: black;
+            color: red;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: black;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        <h1>⚠ WARNING ⚠</h1>
+        <p>The content you are trying to access is illegal and banned in India. Accessing such content may result in legal consequences.</p>
+        <p>Please exit this page immediately.</p>
+    </div>
+    <div class="input-box">
+        <input type="text" placeholder="Enter Instagram profile link">
+        <button>Enter</button>
+    </div>
+</body>
+</html>
